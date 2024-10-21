@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #523996;
+  font-family: sans-serif;
+  color: white;
+}
+
+main {
+  padding: 4rem 6rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+p {
+  max-width: 50ch;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+button {
+  padding: 1rem 2rem;
+  border: none;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
