@@ -1,0 +1,94 @@
+@layer reset, main;
+
+:root {
+  --clr-primary: #f8c7db;
+}
+
+@layer main {
+  body {
+    font-family: sans-serif;
+    background-color: var(--clr-primary);
+    color: white;
+    min-height: 100vh;
+  }
+
+  header {
+    text-align: center;
+    padding-block: 1rem;
+    border-bottom: 1px solid white;
+  }
+
+  main {
+    padding-block: 4rem;
+  }
+
+  img {
+    border-radius: 999px;
+    aspect-ratio: 1 / 1;
+    width: 12rem;
+    margin-inline: auto;
+  }
+
+  article {
+    background-color: white;
+    color: var(--clr-primary);
+    max-width: 24rem;
+    margin-inline: auto;
+    border-radius: 0.75rem;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+
+    display: grid;
+    gap: 1rem;
+  }
+
+  .separator {
+    height: 1px;
+    width: 100%;
+    background-color: var(--clr-primary);
+  }
+
+  footer {
+    text-align: center;
+    border-top: 1px solid white;
+
+    p {
+      padding-block: 1rem;
+      margin-block: auto;
+    }
+  }
+}
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
