@@ -1,0 +1,137 @@
+@layer reset, main;
+
+:root {
+  --clr-accent: 44, 75%, 62%;
+}
+
+@layer main {
+  body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .container {
+    max-width: 40rem;
+    margin-inline: auto;
+    padding: 1rem 4rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+      transition: ease-in-out all 150ms;
+
+      &:hover {
+        text-decoration-color: hsl(var(--clr-accent));
+      }
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  section {
+    margin-block: 1rem;
+  }
+
+  main {
+    p {
+      margin-top: 0.5rem;
+    }
+
+    .input {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.25rem 0.75rem;
+      border: none;
+      border: 1px solid black;
+      border-radius: 0.25rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      font-weight: 400;
+      background-color: hsl(var(--clr-accent));
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      transition: ease-in-out all 150ms;
+
+      &:hover {
+        background-color: hsl(var(--clr-accent), 80%);
+      }
+    }
+  }
+
+  footer {
+    margin: 2rem 4rem;
+    text-align: center;
+  }
+}
+
+@layer reset {
+  * {
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Class Project 2 - HTML</title>
+  </head>
+
+  <body>
+    <nav class="container">
+      <p>Robo.inc</p>
+
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Location</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section>
+        <h1>Sunny Robot</h1>
+        <img
+          src="https://raw.githubusercontent.com/palaogn/cuteRobots/main/robot-images/robot14.png"
+          alt="Cute yellow robot"
+        />
+        <p>Hello! I'm Sunny Robot, I always bring sunshine & smiles.</p>
+      </section>
+
+      <section>
+        <h2>My Favorite Drinks</h2>
+        <ol>
+          <li>Coffee</li>
+          <li>
+            Tea
+            <ul>
+              <li>Black tea</li>
+              <li>Green tea</li>
+            </ul>
+          </li>
+          <li>Bubble tea</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Contact Me</h2>
+
+        <form>
+          <div class="input">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div class="input">
+            <label for="name">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="input">
+            <label for="message">Your Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              rows="4"
+              cols="32"
+            ></textarea>
+          </div>
+
+          <div class="input">
+            <label for="date">What date:</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="container"><p>Made by Neesh</p></footer>
+  </body>
+</html>
