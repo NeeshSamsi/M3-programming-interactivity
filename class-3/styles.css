@@ -27,6 +27,7 @@
     aspect-ratio: 1 / 1;
     width: 12rem;
     margin-inline: auto;
+    object-fit: cover;
   }
 
   article {
@@ -40,6 +41,11 @@
 
     display: grid;
     gap: 1rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   .separator {
