@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">bulb.co</a>
+      <a href="#" class="logo">pulse.art</a>
       <nav>
         <a href="#">About</a>
         <a href="#">Contact us</a>
@@ -24,9 +24,19 @@
     </header>
 
     <main>
-      <h1>Happy Friday!</h1>
+      <div>
+        <h1>Embrace your Creativity</h1>
+        <p>
+          Unlock your artistic potential and be inspired by vibrant works from
+          diverse creators. Join us in celebrating the boundless world of art.
+        </p>
+        <a href="#">Explore</a>
+      </div>
 
-      <img src="./assets/bulb.png" alt="Bulb logo" />
+      <img
+        src="https://images.unsplash.com/photo-1459908676235-d5f02a50184b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Art supplies"
+      />
     </main>
 
     <section>
@@ -109,9 +119,73 @@
       </div>
     </section>
 
+    <section class="form-section">
+      <div class="form-wrapper">
+        <h2>Reach Out</h2>
+        <form>
+          <div class="input-group">
+            <div class="input">
+              <label for="first-name">First Name:</label>
+              <input
+                type="text"
+                id="first-name"
+                name="firstName"
+                placeholder="Neesh"
+              />
+            </div>
+            <div class="input">
+              <label for="last-name">Last Name:</label>
+              <input
+                type="text"
+                id="last-name"
+                name="lastName"
+                placeholder="Samsi"
+              />
+            </div>
+          </div>
+
+          <div class="input">
+            <label for="name">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="input">
+            <label for="message">Your Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+
+          <button type="submit">Send message</button>
+        </form>
+      </div>
+
+      <img src="https://picsum.photos/512" alt="random image" />
+    </section>
+
     <footer>
-      <p>Created by <a href="https://neeshsamsi.com">Neesh!</a></p>
-      <p>&copy; 2024</p>
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <a href="#" class="logo">pulse.art</a>
+          <p>Embrace your creativity</p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <p class="footer-copy">
+        Created by <a href="https://neeshsamsi.com">Neesh!</a> &copy; 2024
+      </p>
     </footer>
   </body>
 </html>
