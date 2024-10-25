@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+header {
+  background-color: coral;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 3rem;
+}
+
+nav {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    text-decoration: overline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+main {
+  background-color: coral;
+  color: white;
+  padding-inline: 3rem;
+  padding-block: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  img {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    width: 12rem;
+  }
+}
+
+section {
+  padding: 3rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.text-container {
+  display: grid;
+  gap: 1rem;
+}
+
+footer {
+  padding: 3rem;
+  border-top: 1px solid black;
+  font-weight: 500;
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  header,
+  main,
+  section,
+  footer {
+    padding-inline: 1rem;
+  }
+
+  main {
+    padding-block: 2rem 4rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  section {
+    padding-block: 2rem;
+    gap: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    gap: 0.5rem;
+  }
+
+  .text-container {
+    gap: 0.75rem;
+  }
+
+  footer {
+    padding-block: 1rem;
+    font-size: 1rem;
+  }
+}
