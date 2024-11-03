@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Unit Converter - Weekly Project 2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Unit Converter</h1>
+
+      <div class="forms">
+        <form data-unit="celsius" class="conversion-form">
+          <h2 class="label">
+            <label for="celsius">Celsius to Fahrenheit:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="celsius" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+
+        <form data-unit="fahrenheit" class="conversion-form">
+          <h2 class="label">
+            <label for="fahrenheit">Fahrenheit to Celsius:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="fahrenheit" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+
+        <form data-unit="kilometre" class="conversion-form">
+          <h2 class="label">
+            <label for="kilometre">Kilometre to Mile:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="kilometre" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+
+        <form data-unit="mile" class="conversion-form">
+          <h2 class="label">
+            <label for="mile">Mile to Kilometre:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="mile" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+
+        <form data-unit="minute" class="conversion-form">
+          <h2 class="label">
+            <label for="minute">Minutes to Days:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="minute" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+
+        <form data-unit="day" class="conversion-form">
+          <h2 class="label">
+            <label for="day">Days to Minutes:</label>
+          </h2>
+          <div class="input-wrapper">
+            <input required type="number" id="day" name="value" />
+            <button type="submit" class="convert-button">Convert</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="conversions">
+        <div class="conversions-heading">
+          <h2 class="heading-2">Conversion History:</h2>
+          <button id="clear-button">Clear all</button>
+        </div>
+
+        <div id="conversions-container"></div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background-color: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+button {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+input,
+.convert-button,
+/* #clear-button, */
+.conversion {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(
+    farthest-corner circle at 100% 0% in oklab,
+    oklch(80% 0.4 222) 0%,
+    oklch(35% 0.5 313) 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+}
+
+.wrapper {
+  max-width: 28rem;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 2rem;
+}
+
+.label {
+  font-size: 1.3rem;
+}
+
+.forms {
+  width: 100%;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.conversion-form {
+  display: grid;
+  gap: 0.75rem;
+
+  label {
+    font-weight: 500;
+  }
+}
+.input-wrapper {
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+
+  input,
+  button {
+    &:focus-visible {
+      outline: 2px solid black;
+    }
+  }
+
+  input {
+    flex: 1;
+  }
+}
+
+.convert-button {
+  background-color: white;
+  transition: outline 200ms ease-in-out, transform 200ms ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+    outline: 1px solid black;
+  }
+}
+
+.conversions {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.conversions-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#clear-button {
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transition: transform 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+#conversions-container {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.conversion {
+  color: black;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: appear 250ms forwards;
+
+  div {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: appear 250ms 100ms forwards;
+  }
+  p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: appear 250ms 200ms forwards;
+  }
+}
+
+.delete-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  padding: 0.5rem;
+  border-radius: 50%;
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
