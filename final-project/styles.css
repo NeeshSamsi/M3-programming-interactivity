@@ -16,6 +16,7 @@
   }
 
   body {
+    overscroll-behavior-y: none;
     font-family: "Poppins", sans-serif;
   }
 
@@ -70,6 +71,29 @@
     }
   }
 
+  .underline-animation {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: currentColor;
+      height: 0.1em;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(-0.2em);
+      transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -103,6 +127,12 @@
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     border: 1px solid black;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 
   .hamburger {
@@ -206,7 +236,7 @@
 
   #services {
     position: relative;
-    padding-block: 4rem 6rem;
+    padding-block: 3rem;
   }
 
   .services-container {
@@ -253,6 +283,55 @@
     z-index: -1;
     width: 8rem;
     height: 8rem;
+  }
+
+  #destinations {
+    padding-block: 2rem 3rem;
+  }
+
+  .destinations-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .destinations-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  .destinations-content {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .destinations-image {
+    aspect-ratio: 1/1;
+  }
+  .destinations-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    h3,
+    p {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+  .destinations-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .duration-icon {
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(90deg);
   }
 
   @media (width >= 30rem) {
@@ -352,6 +431,19 @@
 
     #services-right-graphic {
       top: 4rem;
+    }
+
+    .destinations-container {
+      margin-top: 4rem;
+    }
+    .destinations-details {
+      h3,
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    .destinations-duration {
+      font-size: 1rem;
     }
   }
 
