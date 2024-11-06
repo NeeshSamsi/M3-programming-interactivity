@@ -11,6 +11,10 @@
 }
 
 @layer main {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: "Poppins", sans-serif;
   }
@@ -35,12 +39,20 @@
 
   .heading-2 {
     font-family: "Volkhov", serif;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
+  }
+
+  .section-subtitle {
+    margin-bottom: 1rem;
   }
 
   .text-muted {
     color: var(--clr-text-muted);
+  }
+
+  .text-center {
+    text-align: center;
   }
 
   .graphic-underline {
@@ -192,6 +204,57 @@
     aspect-ratio: 0.829 / 1;
   }
 
+  #services {
+    position: relative;
+    padding-block: 4rem 6rem;
+  }
+
+  .services-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .services-card {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: box-shadow 200ms ease-in-out;
+    font-weight: 500;
+
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    p {
+      max-width: 16ch;
+      font-size: 0.875rem;
+    }
+  }
+
+  #services-right-graphic {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    z-index: -1;
+    width: 8rem;
+    height: 8rem;
+  }
+
   @media (width >= 30rem) {
     .user-actions {
       a {
@@ -206,6 +269,10 @@
   }
 
   @media (width >= 48rem) {
+    .heading-2 {
+      font-size: 3rem;
+    }
+
     .wrapper {
       padding-block: 2rem;
     }
@@ -250,13 +317,41 @@
       margin-bottom: 2rem;
     }
 
+    .ctas {
+      flex-direction: column;
+      align-items: start;
+    }
+
     .hero-image {
       width: 50%;
     }
 
-    .ctas {
-      flex-direction: column;
-      align-items: start;
+    #services-right-graphic {
+      display: block;
+    }
+
+    .services-container {
+      margin-top: 4rem;
+    }
+
+    .services-card {
+      padding: 2rem;
+
+      img {
+        width: 7rem;
+        height: 7rem;
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    #services-right-graphic {
+      top: 4rem;
     }
   }
 
