@@ -1,5 +1,6 @@
 ## Requirements:
 
+- Footer
 - Use keyframes for animations
 - Video modal
 - Interactive canvas
