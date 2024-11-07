@@ -177,14 +177,17 @@
 
   .hero-subtitle {
     color: hsl(var(--clr-accent-2));
+    animation: fade-in 250ms ease-in-out;
   }
 
   .hero-title {
     margin-bottom: 1.2rem;
+    animation: fade-in 250ms 100ms ease-in-out;
   }
 
   .hero-text {
     margin-bottom: 1.5rem;
+    animation: fade-in 250ms 200ms ease-in-out;
   }
 
   .ctas {
@@ -193,6 +196,7 @@
     flex-direction: column;
     gap: 1.5rem;
     font-weight: 500;
+    animation: fade-in 250ms 300ms ease-in-out;
   }
 
   .cta-main {
@@ -236,6 +240,7 @@
   .hero-image {
     width: 80%;
     aspect-ratio: 0.829 / 1;
+    animation: fade-in 250ms 200ms ease-in-out;
   }
 
   #services {
@@ -608,9 +613,18 @@
     transform: translate(20%, -20%) rotate(-60deg);
   }
 
+  #interactive-canvas {
+    margin-top: 2rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem hsl(var(--clr-text) / 0.2);
+  }
+
   .footer {
+    position: relative;
     display: grid;
     gap: 4rem;
+    isolation: isolate;
   }
 
   .footer-content {
@@ -681,11 +695,15 @@
     gap: 1rem;
   }
 
-  #interactive-canvas {
-    margin-top: 2rem;
-    margin-inline: auto;
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem hsl(var(--clr-text) / 0.2);
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media (width >= 30rem) {
