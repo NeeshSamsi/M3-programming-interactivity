@@ -140,6 +140,14 @@
     }
   }
 
+  .user-link {
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: hsl(var(--clr-text-muted));
+    }
+  }
+
   .hamburger {
     width: 3rem;
     height: 3rem;
