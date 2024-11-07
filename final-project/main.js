@@ -1,3 +1,18 @@
+// VIDEO MODAL
+const videoModal = document.getElementById("video-modal")
+const videoButton = document.getElementById("video-button")
+const closeButton = document.querySelector(".close")
+
+videoButton.addEventListener("click", () => {
+  videoModal.showModal()
+  videoModal.style.display = "flex"
+})
+
+closeButton.addEventListener("click", () => {
+  videoModal.close()
+  videoModal.style.display = "none"
+})
+
 // FAQs
 const faqs = document.querySelectorAll(".faq")
 
@@ -11,12 +26,31 @@ faqs.forEach((faq) => {
   })
 })
 
+// NEWSLETTER FORM
+const newsletter = document.getElementById("newsletter-form")
+
+newsletter.addEventListener("submit", (event) => {
+  event.preventDefault()
+
+  const formData = new FormData(event.target)
+  const { email } = Object.fromEntries(formData)
+
+  console.log(email)
+
+  const toast = document.getElementById("toast")
+  toast.dataset.show = "true"
+  setTimeout(() => {
+    toast.dataset.show = "false"
+  }, 3000)
+
+  newsletter.reset()
+})
+
+// CANVAS
 const canvas = document.getElementById("interactive-canvas")
 const ctx = canvas.getContext("2d")
 canvas.width = window.innerWidth - 300
 canvas.height = window.innerHeight - 300
-
-console.log(window.innerWidth - 160, window.innerHeight - 160)
 
 let isMouseDown = false
 

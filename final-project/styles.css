@@ -168,6 +168,55 @@
     display: none;
   }
 
+  #toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem hsl(var(--clr-text) / 0.1);
+    z-index: 100;
+    display: none;
+    animation: fade-in 250ms ease-in-out;
+
+    &[data-show="true"] {
+      display: block;
+    }
+
+    .toast-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .toast-text {
+      color: hsl(var(--clr-text-muted));
+    }
+  }
+
+  #video-modal {
+    border: none;
+    margin: auto;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+
+    display: none;
+
+    .close {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    iframe {
+      aspect-ratio: 16/9;
+    }
+  }
+
   .hero {
     display: flex;
     flex-direction: column;
