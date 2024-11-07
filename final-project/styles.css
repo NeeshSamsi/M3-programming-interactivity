@@ -369,15 +369,15 @@
   }
   .step-icon[data-step="1"] {
     color: white;
-    background-color: var(--clr-accent-1);
+    background-color: hsl(var(--clr-accent-1));
   }
   .step-icon[data-step="2"] {
     color: white;
-    background-color: var(--clr-accent-2);
+    background-color: hsl(var(--clr-accent-2));
   }
   .step-icon[data-step="3"] {
     color: white;
-    background-color: var(--clr-accent-3);
+    background-color: hsl(var(--clr-accent-3));
   }
 
   .step-title {
@@ -695,11 +695,18 @@
 
     .faq {
       gap: 1.5rem;
+      cursor: pointer;
     }
 
     .faq-icon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    .faq[data-active="true"] .faq-icon[data-icon="plus"] {
+      display: none;
+    }
+    .faq[data-active="false"] .faq-icon[data-icon="minus"] {
+      display: none;
     }
 
     .faq-title {
